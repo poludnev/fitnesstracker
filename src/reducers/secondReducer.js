@@ -3,7 +3,7 @@ const initialState = [];
 const secondReducer = (state = initialState, action) => {
 
   switch (action.type) {
-    case 'ADD':
+    case 'ADD_2':
       state.push(action.payload);
       return [...state];
     case 'REMOVE':

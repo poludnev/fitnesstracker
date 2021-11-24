@@ -1,9 +1,19 @@
 import axios from 'axios';
 
-export const add = (payload, ...args) => {
+export const add = (payload) => {
+  const id = Date.now();
+  const date = new Date(id);
+  const [month, day, year] = [date.getUTCMonth(), date.getUTCDate(), date.getUTCFullYear()];
+  const trainingId = `${year}${month + 1}${day}`
 
-  console.log('action: added task', payload);
-  return { type: 'ADD', payload };
+  axios.post('https://poludnev.com/api/fitness', {
+    [id]: {trainingId, ...payload},
+  }).then((response) => {
+    console.log(response.data)
+
+  })
+  
+  return { type: 'ADD', payload: { [id]: {trainingId, ...payload}} };
 };
 
 export const remove = (payload, ...args) => {
@@ -11,4 +21,3 @@ export const remove = (payload, ...args) => {
 
   return { type: 'REMOVE' };
 }
-

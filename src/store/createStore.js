@@ -7,6 +7,7 @@ import secondReducer from '../reducers/secondReducer';
 
 
 const reducers = combineReducers({
+  
   first: firstReducer,
   second: secondReducer,
 })
