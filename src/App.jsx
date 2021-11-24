@@ -13,9 +13,9 @@ const TaskCard = ({ id, data }) => {
         <Card.Header>{data.name}</Card.Header>
     <Card.Body>
       <p>Time: {data.time}</p>
-      <p>Duration: {data.time}</p>
-      <p>Load: {data.time}</p>
-      <p>Calories: {data.time}</p>
+      <p>Distance: {data.distance}</p>
+      <p>Load: {data.load}</p>
+      <p>Calories: {data.callories}</p>
     </Card.Body>
 
       </Card>)
@@ -70,7 +70,7 @@ const App = (props) => {
       onSubmit={
         ((values, { setSubmitting }) => {
           const { name, time, distance, load, callories } = values;
-          
+          console.log(values)
 
           addHandler(values);
 
