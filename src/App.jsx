@@ -28,31 +28,37 @@ const App = (props) => {
     <Form>
       <Row>
         <Col>
-        <Form.Control placeholder="Name" />
+        <Form.Control size="lg" placeholder="Name" />
         </Col>
       </Row>
       <Row>
         <Col>
-          <Form.Control placeholder="Time" />
+          <Form.Control size="lg" placeholder="Time" />
         </Col>
         <Col>
-          <Form.Control placeholder="Units" />        
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Form.Control placeholder="Distance" />
-        </Col>
-        <Col>
-          <Form.Control placeholder="Units" />        
+          <Form.Select size="lg" aria-label="select power">
+            <option value="1">Minutes</option>
+            <option value="2">H:M:S</option>
+          </Form.Select>     
         </Col>
       </Row>
       <Row>
         <Col>
-          <Form.Control placeholder="Load" />
+          <Form.Control size="lg" placeholder="Distance" />
         </Col>
         <Col>
-          <Form.Select aria-label="select power">
+          <Form.Select size="lg" aria-label="select power">
+            <option value="1">Meters</option>
+            <option value="2">KiloMeters</option>
+          </Form.Select>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Form.Control size="lg" placeholder="Load" />
+        </Col>
+        <Col>
+          <Form.Select size="lg" aria-label="select power">
             <option value="1">Level</option>
             <option value="2">Kg</option>
           </Form.Select>        
