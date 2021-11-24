@@ -44,11 +44,11 @@ const App = (props) => {
     <Formik
       initialValues={
         {
-          name: '1',
-          time: '2',
-          distance: '3',
-          load: '4',
-          callories: '5',
+          name: '',
+          time: '',
+          distance: '',
+          load: '',
+          callories: '',
 
         }}
       validate={(values) => {
