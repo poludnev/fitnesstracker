@@ -7,7 +7,7 @@ export const add = (payload) => {
   const trainingId = `${year}${month + 1}${day}`
 
   axios.post('https://poludnev.com/api/fitness', {
-    [id]: {trainingId, ...payload},
+    [id]: {id, trainingId, ...payload},
   }).then((response) => {
     console.log('got response', response.data)
     
@@ -22,4 +22,9 @@ export const remove = (payload, ...args) => {
   console.log('action: remove task', payload);
 
   return { type: 'REMOVE' };
+}
+
+export const addToday = (payload) => {
+
+  return { type: 'ADD_TODAY', payload}
 }

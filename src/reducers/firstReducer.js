@@ -13,7 +13,8 @@ const firstReducer = (state = initialState, action) => {
       const newState = { ...state, ...action.payload }
       console.group(newState)
 
-      return newState
+      return newState;
+    
     case 'REMOVE':
       
       return { ...state };
