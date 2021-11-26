@@ -9,8 +9,10 @@ export const add = (payload) => {
   axios.post('https://poludnev.com/api/fitness', {
     [id]: {trainingId, ...payload},
   }).then((response) => {
-    console.log(response.data)
-
+    console.log('got response', response.data)
+    
+  }).catch((e) => {
+    console.error('fucked up', e);
   })
   
   return { type: 'ADD', payload: { [id]: {trainingId, ...payload}} };
